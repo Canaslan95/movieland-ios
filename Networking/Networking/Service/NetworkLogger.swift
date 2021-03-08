@@ -9,38 +9,61 @@ import Foundation
 
 protocol NetworkLogger {
     func log(request: URLRequest)
-    func log(response: URLResponse)
+    func log(response: HTTPURLResponse)
+    func log(responseData: Data?)
+    
 }
 
 extension NetworkLogger {
     
     func log(request: URLRequest) {
-        
-        print("\n - - - - - - - - - - OUTGOING - - - - - - - - - - \n")
-        defer { print("\n - - - - - - - - - -  END - - - - - - - - - - \n") }
-        
+        print("< - - - - - - - - - - Request Begin - - - - - - - - - - >")
+
         let urlAsString = request.url?.absoluteString ?? ""
-        let urlComponents = NSURLComponents(string: urlAsString)
-        
+        let urlComponents = URLComponents(string: urlAsString)
+
         let method = request.httpMethod != nil ? "\(request.httpMethod ?? "")" : ""
         let path = "\(urlComponents?.path ?? "")"
         let query = "\(urlComponents?.query ?? "")"
-        let host = "\(urlComponents?.host ?? "")"
-        
-        var logOutput = """
-                        \(urlAsString) \n\n
-                        \(method) \(path)?\(query) HTTP/1.1 \n
-                        HOST: \(host)\n
-                        """
-        for (key,value) in request.allHTTPHeaderFields ?? [:] {
-            logOutput += "\(key): \(value) \n"
+
+        var output: [String] = []
+        output.append(urlAsString)
+        output.append(method)
+        output.append("\(path)\(query)")
+
+        output.append("< - - - - - - - - Request Headers Begin - - - - - - - - >" )
+        request.allHTTPHeaderFields?.forEach({
+            output.append("\($0): \($1)")
+        })
+        output.append("< - - - - - - - - Request Headers End - - - - - - - - >")
+
+        if let body = request.httpBody,
+            let bodyString = String(data: body, encoding: .utf8), bodyString.count < 100000 {
+            output.append("< - - - - - - - - - Request Body Begin - - - - - - - - - >")
+            output.append(bodyString)
+            output.append("< - - - - - - - - - Request Body End - - - - - - - - - >")
         }
-        if let body = request.httpBody {
-            logOutput += "\n \(NSString(data: body, encoding: String.Encoding.utf8.rawValue) ?? "")"
-        }
-        
-        print(logOutput)
+
+        output.forEach({ print($0) })
+        print("< - - - - - - - - - - Request End - - - - - - - - - - >")
     }
-    
-    func log(response: URLResponse) {}
+
+    func log(responseData: Data?) {
+        print("< - - - - - - - - - - Response Begin - - - - - - - - - - >")
+        if let bodyData = responseData, let json = try? JSONSerialization.jsonObject(with: bodyData),
+            let jsonData = try? JSONSerialization.data(withJSONObject: json, options: .prettyPrinted) {
+            let string = String(decoding: jsonData, as: UTF8.self)
+            guard string.count < 100000 else { return }
+            print(string)
+        } else {
+            print("JSON Data malformed.")
+        }
+        print("< - - - - - - - - - - Response End - - - - - - - - - - >")
+    }
+
+    func log(response: HTTPURLResponse) {
+        print("< - - - - - - - - - - Response Begin - - - - - - - - - - >")
+        print("SERVER RETURNED WITH HTTP CODE: ", "\(response.statusCode)")
+        print("< - - - - - - - - - - Response End - - - - - - - - - - >")
+    }
 }
