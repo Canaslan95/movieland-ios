@@ -5,6 +5,9 @@
       location = "container:Movieland.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:Common/Common.xcodeproj">
+   </FileRef>
+   <FileRef
       location = "group:Networking/Networking.xcodeproj">
    </FileRef>
 </Workspace>

@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BAAB9E0325F1623900AF913A /* EndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9DF925F1623800AF913A /* EndpointType.swift */; };
+		BAAB9E2B25F1657B00AF913A /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9E2A25F1657B00AF913A /* ParameterEncoding.swift */; };
+		BAAB9E4425F1667C00AF913A /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9E4325F1667C00AF913A /* JSONParameterEncoder.swift */; };
+		BAAB9E4825F1669200AF913A /* URLParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9E4725F1669200AF913A /* URLParameterEncoder.swift */; };
+		BAAB9F4025F4F49400AF913A /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F3F25F4F49400AF913A /* HTTPMethod.swift */; };
+		BAAB9F4625F4F4E200AF913A /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F4525F4F4E200AF913A /* HTTPTask.swift */; };
+		BAAB9F4A25F4F4F300AF913A /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F4925F4F4F300AF913A /* NetworkLogger.swift */; };
+		BAAB9F5625F4F54000AF913A /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F5525F4F54000AF913A /* Router.swift */; };
+		BAAB9F6525F4FD8500AF913A /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F6425F4FD8500AF913A /* NetworkManager.swift */; };
+		BAAB9F7E25F5525500AF913A /* EndpointType+Retrieve.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F7D25F5525500AF913A /* EndpointType+Retrieve.swift */; };
+		BAAB9F8425F553E600AF913A /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F8325F553E600AF913A /* NetworkingError.swift */; };
+		BAAB9F8825F5541900AF913A /* EndpointType+ErrorHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F8725F5541900AF913A /* EndpointType+ErrorHandler.swift */; };
+		BAAB9F8D25F554CD00AF913A /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F8C25F554CD00AF913A /* Response.swift */; };
 		BABE0B1E25ED94D800E298DF /* Networking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BABE0B1425ED94D800E298DF /* Networking.framework */; };
 		BABE0B2325ED94D800E298DF /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABE0B2225ED94D800E298DF /* NetworkingTests.swift */; };
 		BABE0B2525ED94D800E298DF /* Networking.h in Headers */ = {isa = PBXBuildFile; fileRef = BABE0B1725ED94D800E298DF /* Networking.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -23,6 +36,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		BAAB9DF925F1623800AF913A /* EndpointType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EndpointType.swift; sourceTree = "<group>"; };
+		BAAB9E2A25F1657B00AF913A /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		BAAB9E4325F1667C00AF913A /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		BAAB9E4725F1669200AF913A /* URLParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParameterEncoder.swift; sourceTree = "<group>"; };
+		BAAB9F3F25F4F49400AF913A /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		BAAB9F4525F4F4E200AF913A /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
+		BAAB9F4925F4F4F300AF913A /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
+		BAAB9F5525F4F54000AF913A /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		BAAB9F6425F4FD8500AF913A /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		BAAB9F7D25F5525500AF913A /* EndpointType+Retrieve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EndpointType+Retrieve.swift"; sourceTree = "<group>"; };
+		BAAB9F8325F553E600AF913A /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		BAAB9F8725F5541900AF913A /* EndpointType+ErrorHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EndpointType+ErrorHandler.swift"; sourceTree = "<group>"; };
+		BAAB9F8C25F554CD00AF913A /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		BABE0B1425ED94D800E298DF /* Networking.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Networking.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BABE0B1725ED94D800E298DF /* Networking.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Networking.h; sourceTree = "<group>"; };
 		BABE0B1825ED94D800E298DF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -50,6 +76,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BAAB9DFC25F1623800AF913A /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				BAAB9E4325F1667C00AF913A /* JSONParameterEncoder.swift */,
+				BAAB9E2A25F1657B00AF913A /* ParameterEncoding.swift */,
+				BAAB9E4725F1669200AF913A /* URLParameterEncoder.swift */,
+			);
+			path = Encoding;
+			sourceTree = "<group>";
+		};
+		BAAB9F3E25F4F46D00AF913A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				BAAB9DF925F1623800AF913A /* EndpointType.swift */,
+				BAAB9F3F25F4F49400AF913A /* HTTPMethod.swift */,
+				BAAB9F4525F4F4E200AF913A /* HTTPTask.swift */,
+				BAAB9F4925F4F4F300AF913A /* NetworkLogger.swift */,
+				BAAB9F5525F4F54000AF913A /* Router.swift */,
+				BAAB9F8325F553E600AF913A /* NetworkingError.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		BAAB9F6325F4FD7400AF913A /* NetworkManager */ = {
+			isa = PBXGroup;
+			children = (
+				BAAB9F6425F4FD8500AF913A /* NetworkManager.swift */,
+			);
+			path = NetworkManager;
+			sourceTree = "<group>";
+		};
+		BAAB9F7C25F5521500AF913A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BAAB9F7D25F5525500AF913A /* EndpointType+Retrieve.swift */,
+				BAAB9F8725F5541900AF913A /* EndpointType+ErrorHandler.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BAAB9F8B25F554BF00AF913A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				BAAB9F8C25F554CD00AF913A /* Response.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BABE0B0A25ED94D800E298DF = {
 			isa = PBXGroup;
 			children = (
@@ -71,6 +145,11 @@
 		BABE0B1625ED94D800E298DF /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				BAAB9F8B25F554BF00AF913A /* Models */,
+				BAAB9F7C25F5521500AF913A /* Extensions */,
+				BAAB9F6325F4FD7400AF913A /* NetworkManager */,
+				BAAB9F3E25F4F46D00AF913A /* Service */,
+				BAAB9DFC25F1623800AF913A /* Encoding */,
 				BABE0B1725ED94D800E298DF /* Networking.h */,
 				BABE0B1825ED94D800E298DF /* Info.plist */,
 			);
@@ -147,6 +226,7 @@
 				TargetAttributes = {
 					BABE0B1325ED94D800E298DF = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					BABE0B1C25ED94D800E298DF = {
 						CreatedOnToolsVersion = 12.2;
@@ -194,6 +274,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAAB9F7E25F5525500AF913A /* EndpointType+Retrieve.swift in Sources */,
+				BAAB9F6525F4FD8500AF913A /* NetworkManager.swift in Sources */,
+				BAAB9F8425F553E600AF913A /* NetworkingError.swift in Sources */,
+				BAAB9F4A25F4F4F300AF913A /* NetworkLogger.swift in Sources */,
+				BAAB9F5625F4F54000AF913A /* Router.swift in Sources */,
+				BAAB9F4625F4F4E200AF913A /* HTTPTask.swift in Sources */,
+				BAAB9F8D25F554CD00AF913A /* Response.swift in Sources */,
+				BAAB9E0325F1623900AF913A /* EndpointType.swift in Sources */,
+				BAAB9F4025F4F49400AF913A /* HTTPMethod.swift in Sources */,
+				BAAB9F8825F5541900AF913A /* EndpointType+ErrorHandler.swift in Sources */,
+				BAAB9E2B25F1657B00AF913A /* ParameterEncoding.swift in Sources */,
+				BAAB9E4825F1669200AF913A /* URLParameterEncoder.swift in Sources */,
+				BAAB9E4425F1667C00AF913A /* JSONParameterEncoder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +434,7 @@
 		BABE0B2925ED94D800E298DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 34PCB7GY2F;
@@ -357,6 +451,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.Networking;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +460,7 @@
 		BABE0B2A25ED94D800E298DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 34PCB7GY2F;
@@ -389,6 +485,7 @@
 		BABE0B2C25ED94D800E298DF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34PCB7GY2F;
 				INFOPLIST_FILE = NetworkingTests/Info.plist;
@@ -407,6 +504,7 @@
 		BABE0B2D25ED94D800E298DF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 34PCB7GY2F;
 				INFOPLIST_FILE = NetworkingTests/Info.plist;
