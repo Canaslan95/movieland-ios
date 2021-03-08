@@ -28,6 +28,7 @@ public class NetworkRouter<Endpoint: EndpointType>: NetworkRouting, NetworkLogge
         let session = URLSession.shared
         do {
             let request = try self.buildRequest(from: route)
+            self.log(request: request)
             task = session.dataTask(with: request, completionHandler: { data, response, error in
                 self.handleResponse(data: data, response: response, completion: completion)
             })
@@ -107,6 +108,7 @@ public class NetworkRouter<Endpoint: EndpointType>: NetworkRouting, NetworkLogge
                     return
                 }
                 do {
+                    log(responseData: data)
                     let apiResponse = try JSONDecoder().decode(T.self, from: responseData)
                     completion(.success(apiResponse))
                 } catch {
