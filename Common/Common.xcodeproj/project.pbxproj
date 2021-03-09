@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DEB416925F77F45002807FB /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB416825F77F45002807FB /* Dates.swift */; };
+		8DEB416F25F78194002807FB /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB416E25F78194002807FB /* Movie.swift */; };
 		BAAB9EF125F4EDCC00AF913A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAB9EE725F4EDCB00AF913A /* Common.framework */; };
 		BAAB9EF625F4EDCC00AF913A /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9EF525F4EDCC00AF913A /* CommonTests.swift */; };
 		BAAB9EF825F4EDCC00AF913A /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = BAAB9EEA25F4EDCB00AF913A /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -27,6 +29,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DEB416825F77F45002807FB /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
+		8DEB416E25F78194002807FB /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		BAAB9EE725F4EDCB00AF913A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAAB9EEA25F4EDCB00AF913A /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		BAAB9EEB25F4EDCB00AF913A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -58,6 +62,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DEB416725F77F21002807FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8DEB416825F77F45002807FB /* Dates.swift */,
+				8DEB416E25F78194002807FB /* Movie.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8DEB417F25F7A245002807FB /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		BAAB9EDD25F4EDCB00AF913A = {
 			isa = PBXGroup;
 			children = (
@@ -79,9 +99,10 @@
 		BAAB9EE925F4EDCB00AF913A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8DEB417F25F7A245002807FB /* Cells */,
+				8DEB416725F77F21002807FB /* Models */,
 				BAAB9F7125F508BF00AF913A /* Constants */,
 				BAAB9F1425F4EE1400AF913A /* Extensions */,
-				BAAB9F0F25F4EE0700AF913A /* Models */,
 				BAAB9F0425F4EDF300AF913A /* Typealiases */,
 				BAAB9EEA25F4EDCB00AF913A /* Common.h */,
 				BAAB9EEB25F4EDCB00AF913A /* Info.plist */,
@@ -104,13 +125,6 @@
 				BAAB9F1B25F4EEA800AF913A /* Typealiases.swift */,
 			);
 			path = Typealiases;
-			sourceTree = "<group>";
-		};
-		BAAB9F0F25F4EE0700AF913A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		BAAB9F1425F4EE1400AF913A /* Extensions */ = {
@@ -239,6 +253,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAAB9F1C25F4EEA800AF913A /* Typealiases.swift in Sources */,
+				8DEB416925F77F45002807FB /* Dates.swift in Sources */,
+				8DEB416F25F78194002807FB /* Movie.swift in Sources */,
 				BAAB9FB325F573EE00AF913A /* DispatchGroup+Extensions.swift in Sources */,
 				BAAB9F7725F5097300AF913A /* APIInfo.swift in Sources */,
 				BAAB9F1625F4EE2100AF913A /* NSMutableData+Extensions.swift in Sources */,
