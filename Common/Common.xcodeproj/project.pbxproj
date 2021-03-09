@@ -12,10 +12,7 @@
 		BAAB9EF825F4EDCC00AF913A /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = BAAB9EEA25F4EDCB00AF913A /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BAAB9F1625F4EE2100AF913A /* NSMutableData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F1525F4EE2100AF913A /* NSMutableData+Extensions.swift */; };
 		BAAB9F1C25F4EEA800AF913A /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F1B25F4EEA800AF913A /* Typealiases.swift */; };
-		BAAB9F2025F4EEF900AF913A /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F1F25F4EEF900AF913A /* MimeType.swift */; };
-		BAAB9F2425F4EF2800AF913A /* MultipartFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F2325F4EF2800AF913A /* MultipartFile.swift */; };
 		BAAB9F7725F5097300AF913A /* APIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F7625F5097300AF913A /* APIInfo.swift */; };
-		BAAB9F9125F565BB00AF913A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F9025F565BA00AF913A /* Movie.swift */; };
 		BAAB9FB325F573EE00AF913A /* DispatchGroup+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9FB225F573EE00AF913A /* DispatchGroup+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,10 +35,7 @@
 		BAAB9EF725F4EDCC00AF913A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAAB9F1525F4EE2100AF913A /* NSMutableData+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableData+Extensions.swift"; sourceTree = "<group>"; };
 		BAAB9F1B25F4EEA800AF913A /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
-		BAAB9F1F25F4EEF900AF913A /* MimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
-		BAAB9F2325F4EF2800AF913A /* MultipartFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFile.swift; sourceTree = "<group>"; };
 		BAAB9F7625F5097300AF913A /* APIInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInfo.swift; sourceTree = "<group>"; };
-		BAAB9F9025F565BA00AF913A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		BAAB9FB225F573EE00AF913A /* DispatchGroup+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchGroup+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,9 +109,6 @@
 		BAAB9F0F25F4EE0700AF913A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BAAB9F1F25F4EEF900AF913A /* MimeType.swift */,
-				BAAB9F2325F4EF2800AF913A /* MultipartFile.swift */,
-				BAAB9F9025F565BA00AF913A /* Movie.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -247,13 +238,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAAB9F2425F4EF2800AF913A /* MultipartFile.swift in Sources */,
 				BAAB9F1C25F4EEA800AF913A /* Typealiases.swift in Sources */,
-				BAAB9F9125F565BB00AF913A /* Movie.swift in Sources */,
 				BAAB9FB325F573EE00AF913A /* DispatchGroup+Extensions.swift in Sources */,
 				BAAB9F7725F5097300AF913A /* APIInfo.swift in Sources */,
 				BAAB9F1625F4EE2100AF913A /* NSMutableData+Extensions.swift in Sources */,
-				BAAB9F2025F4EEF900AF913A /* MimeType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
