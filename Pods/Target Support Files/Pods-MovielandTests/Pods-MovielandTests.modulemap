@@ -1,0 +1,6 @@
+framework module Pods_MovielandTests {
+  umbrella header "Pods-MovielandTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

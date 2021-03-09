@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import Common
+import Kingfisher
 
 class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
@@ -41,7 +42,9 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell") as? MovieTableViewCell
-        cell?.populate(with: MovieCellViewModel(title: viewModel.nowPlayingMovies?[indexPath.row].title ?? ""))
+        cell?.populate(with: MovieCellViewModel(title: viewModel.nowPlayingMovies?[indexPath.row].title ?? "",
+                                                posterPath: viewModel.nowPlayingMovies?[indexPath.row].posterPath,
+                                                genre: ""))
         return cell ?? UITableViewCell()
     }
 }

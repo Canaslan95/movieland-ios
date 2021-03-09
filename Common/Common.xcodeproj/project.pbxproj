@@ -71,13 +71,6 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		8DEB417F25F7A245002807FB /* Cells */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Cells;
-			sourceTree = "<group>";
-		};
 		BAAB9EDD25F4EDCB00AF913A = {
 			isa = PBXGroup;
 			children = (
@@ -99,7 +92,6 @@
 		BAAB9EE925F4EDCB00AF913A /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				8DEB417F25F7A245002807FB /* Cells */,
 				8DEB416725F77F21002807FB /* Models */,
 				BAAB9F7125F508BF00AF913A /* Constants */,
 				BAAB9F1425F4EE1400AF913A /* Extensions */,
