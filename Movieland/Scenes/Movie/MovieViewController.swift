@@ -42,9 +42,8 @@ class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell") as? MovieTableViewCell
-        cell?.populate(with: MovieCellViewModel(title: viewModel.nowPlayingMovies?[indexPath.row].title ?? "",
-                                                posterPath: viewModel.nowPlayingMovies?[indexPath.row].posterPath,
-                                                genre: ""))
+        guard let movieCellViewModel = viewModel.movieCellViewModelArray?[indexPath.row] else { return UITableViewCell() }
+        cell?.populate(with: movieCellViewModel)
         return cell ?? UITableViewCell()
     }
 }

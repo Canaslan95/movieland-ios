@@ -11,12 +11,15 @@ import Common
 
 enum MovieEndpoint: EndpointType {
     
+    case movieDetail(_ id: Int)
     case nowPlaying(_ page: Int)
     
     var path: String {
         switch self {
         case .nowPlaying:
             return "movie/now_playing"
+        case .movieDetail(let id):
+            return "movie/\(id)"
         }
     }
     
@@ -28,13 +31,13 @@ enum MovieEndpoint: EndpointType {
         switch self {
         case .nowPlaying(let page):
             return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: (["page": page, "api_key": APIInfo.key]))
+        case .movieDetail:
+            return .requestParameters(bodyParameters: nil, bodyEncoding: .urlEncoding, urlParameters: (["api_key": APIInfo.key]))
         }
     }
     
     var headers: HTTPHeaders? {
         return nil
     }
-    
-    
     
 }

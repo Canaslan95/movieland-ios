@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DC2EAB525F8C94B00B4A793 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2EAB425F8C94B00B4A793 /* Genre.swift */; };
 		8DEB416925F77F45002807FB /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB416825F77F45002807FB /* Dates.swift */; };
 		8DEB416F25F78194002807FB /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB416E25F78194002807FB /* Movie.swift */; };
 		BAAB9EF125F4EDCC00AF913A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAB9EE725F4EDCB00AF913A /* Common.framework */; };
@@ -29,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DC2EAB425F8C94B00B4A793 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
 		8DEB416825F77F45002807FB /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
 		8DEB416E25F78194002807FB /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		BAAB9EE725F4EDCB00AF913A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +69,7 @@
 			children = (
 				8DEB416825F77F45002807FB /* Dates.swift */,
 				8DEB416E25F78194002807FB /* Movie.swift */,
+				8DC2EAB425F8C94B00B4A793 /* Genre.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -250,6 +253,7 @@
 				BAAB9FB325F573EE00AF913A /* DispatchGroup+Extensions.swift in Sources */,
 				BAAB9F7725F5097300AF913A /* APIInfo.swift in Sources */,
 				BAAB9F1625F4EE2100AF913A /* NSMutableData+Extensions.swift in Sources */,
+				8DC2EAB525F8C94B00B4A793 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
