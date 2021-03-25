@@ -1,20 +1,18 @@
 //
-//  MovieViewController.swift
+//  MoviesViewController.swift
 //  Movieland
 //
-//  Created by Oğulcan Aslan on 9.03.2021.
+//  Created by Cenker Irmak on 25.03.2021.
 //
 
-import Foundation
 import UIKit
 import Common
-import Kingfisher
 
-class MovieViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class MoviesViewController: UIViewController,  UITableViewDelegate, UITableViewDataSource  {
     
     @IBOutlet weak var tableView: UITableView!
     
-    let viewModel: MovieViewModelProtocol = MovieViewModel()
+    let viewModel: MoviesViewModelProtocol = MoviesViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
