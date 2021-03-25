@@ -7,15 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8DC2EAB525F8C94B00B4A793 /* Genre.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DC2EAB425F8C94B00B4A793 /* Genre.swift */; };
+		8DEB416925F77F45002807FB /* Dates.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB416825F77F45002807FB /* Dates.swift */; };
+		8DEB416F25F78194002807FB /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEB416E25F78194002807FB /* Movie.swift */; };
 		BAAB9EF125F4EDCC00AF913A /* Common.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAAB9EE725F4EDCB00AF913A /* Common.framework */; };
 		BAAB9EF625F4EDCC00AF913A /* CommonTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9EF525F4EDCC00AF913A /* CommonTests.swift */; };
 		BAAB9EF825F4EDCC00AF913A /* Common.h in Headers */ = {isa = PBXBuildFile; fileRef = BAAB9EEA25F4EDCB00AF913A /* Common.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BAAB9F1625F4EE2100AF913A /* NSMutableData+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F1525F4EE2100AF913A /* NSMutableData+Extensions.swift */; };
 		BAAB9F1C25F4EEA800AF913A /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F1B25F4EEA800AF913A /* Typealiases.swift */; };
-		BAAB9F2025F4EEF900AF913A /* MimeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F1F25F4EEF900AF913A /* MimeType.swift */; };
-		BAAB9F2425F4EF2800AF913A /* MultipartFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F2325F4EF2800AF913A /* MultipartFile.swift */; };
 		BAAB9F7725F5097300AF913A /* APIInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F7625F5097300AF913A /* APIInfo.swift */; };
-		BAAB9F9125F565BB00AF913A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9F9025F565BA00AF913A /* Movie.swift */; };
 		BAAB9FB325F573EE00AF913A /* DispatchGroup+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAAB9FB225F573EE00AF913A /* DispatchGroup+Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,6 +30,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8DC2EAB425F8C94B00B4A793 /* Genre.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Genre.swift; sourceTree = "<group>"; };
+		8DEB416825F77F45002807FB /* Dates.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dates.swift; sourceTree = "<group>"; };
+		8DEB416E25F78194002807FB /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		BAAB9EE725F4EDCB00AF913A /* Common.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Common.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAAB9EEA25F4EDCB00AF913A /* Common.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		BAAB9EEB25F4EDCB00AF913A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -38,10 +41,7 @@
 		BAAB9EF725F4EDCC00AF913A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BAAB9F1525F4EE2100AF913A /* NSMutableData+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSMutableData+Extensions.swift"; sourceTree = "<group>"; };
 		BAAB9F1B25F4EEA800AF913A /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
-		BAAB9F1F25F4EEF900AF913A /* MimeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MimeType.swift; sourceTree = "<group>"; };
-		BAAB9F2325F4EF2800AF913A /* MultipartFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipartFile.swift; sourceTree = "<group>"; };
 		BAAB9F7625F5097300AF913A /* APIInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIInfo.swift; sourceTree = "<group>"; };
-		BAAB9F9025F565BA00AF913A /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		BAAB9FB225F573EE00AF913A /* DispatchGroup+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DispatchGroup+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +64,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8DEB416725F77F21002807FB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8DEB416825F77F45002807FB /* Dates.swift */,
+				8DEB416E25F78194002807FB /* Movie.swift */,
+				8DC2EAB425F8C94B00B4A793 /* Genre.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		BAAB9EDD25F4EDCB00AF913A = {
 			isa = PBXGroup;
 			children = (
@@ -85,9 +95,9 @@
 		BAAB9EE925F4EDCB00AF913A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				8DEB416725F77F21002807FB /* Models */,
 				BAAB9F7125F508BF00AF913A /* Constants */,
 				BAAB9F1425F4EE1400AF913A /* Extensions */,
-				BAAB9F0F25F4EE0700AF913A /* Models */,
 				BAAB9F0425F4EDF300AF913A /* Typealiases */,
 				BAAB9EEA25F4EDCB00AF913A /* Common.h */,
 				BAAB9EEB25F4EDCB00AF913A /* Info.plist */,
@@ -110,16 +120,6 @@
 				BAAB9F1B25F4EEA800AF913A /* Typealiases.swift */,
 			);
 			path = Typealiases;
-			sourceTree = "<group>";
-		};
-		BAAB9F0F25F4EE0700AF913A /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				BAAB9F1F25F4EEF900AF913A /* MimeType.swift */,
-				BAAB9F2325F4EF2800AF913A /* MultipartFile.swift */,
-				BAAB9F9025F565BA00AF913A /* Movie.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		BAAB9F1425F4EE1400AF913A /* Extensions */ = {
@@ -247,13 +247,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BAAB9F2425F4EF2800AF913A /* MultipartFile.swift in Sources */,
 				BAAB9F1C25F4EEA800AF913A /* Typealiases.swift in Sources */,
-				BAAB9F9125F565BB00AF913A /* Movie.swift in Sources */,
+				8DEB416925F77F45002807FB /* Dates.swift in Sources */,
+				8DEB416F25F78194002807FB /* Movie.swift in Sources */,
 				BAAB9FB325F573EE00AF913A /* DispatchGroup+Extensions.swift in Sources */,
 				BAAB9F7725F5097300AF913A /* APIInfo.swift in Sources */,
 				BAAB9F1625F4EE2100AF913A /* NSMutableData+Extensions.swift in Sources */,
-				BAAB9F2025F4EEF900AF913A /* MimeType.swift in Sources */,
+				8DC2EAB525F8C94B00B4A793 /* Genre.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
