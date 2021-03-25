@@ -10,52 +10,37 @@ import Networking
 import Common
 
 protocol MovieViewModelProtocol {
+    var popularMovies: [Movie]? { get }
     var nowPlayingMovies: [Movie]? { get }
-    var movieCellViewModelArray: [MovieCellViewModel]? { get }
-    func getNowPlayingMovies(completion: @escaping VoidHandler)
-    func getMovieDetail(completion: @escaping VoidHandler)
+    func fetchPageData(completion: @escaping VoidHandler)
 }
 
 class MovieViewModel: MovieViewModelProtocol {
     
-    var movieCellViewModelArray: [MovieCellViewModel]? = [MovieCellViewModel]()
+    private let dispatchGroup = DispatchGroup()
+    var popularMovies: [Movie]? = [Movie]()
     var nowPlayingMovies: [Movie]? = [Movie]()
     
-    func getMovieDetail(completion: @escaping VoidHandler) {
-        guard let nowPlayingMovies = nowPlayingMovies else { return }
-        for (index, movie) in nowPlayingMovies.enumerated() {
-            MovieEndpoint.movieDetail(movie.id).retrieve { (response: MovieDetailsResponse) in
-                self.movieCellViewModelArray?[index].runtime = response.runtime
-                self.movieCellViewModelArray?[index].genre = self.setGenre(genreArray: response.genres ?? [Genre]())
-                self.movieCellViewModelArray?[index].releaseDate = response.releaseDate
-                completion()
-                
-                
-            }
+    func fetchPageData(completion: @escaping VoidHandler) {
+        dispatchGroup.executeRequests([getNowPlayingMovies(),
+                                       getPopularMovies()])  { _ in
+            completion()
         }
     }
     
-    func getNowPlayingMovies(completion: @escaping VoidHandler) {
-        MovieEndpoint.nowPlaying(1).retrieve { (response: NowPlayingResponse ) in
-            self.nowPlayingMovies = response.results
-            self.nowPlayingMovies?.forEach({ (movie) in
-                self.movieCellViewModelArray?.append(MovieCellViewModel(title: movie.title,
-                                                                        posterPath: movie.posterPath,
-                                                                        genre: "",
-                                                                        runtime: 0,
-                                                                        releaseDate: ""))
-            })
-            self.getMovieDetail {
-                completion()
-            }
+    func getNowPlayingMovies() -> BoolFunction  {
+        return { [weak self] completion in
+            MovieEndpoint.nowPlaying(1).retrieve ({ (response: NowPlayingResponse) in
+                self?.nowPlayingMovies = response.results
+            }, dispatcher: completion)
         }
     }
     
-    func setGenre(genreArray: [Genre]) -> String {
-        var genreNameArray = [String]()
-        genreArray.forEach { (genre) in
-            genreNameArray.append(genre.name ?? "")
+    func getPopularMovies() -> BoolFunction {
+        return { [weak self] completion in
+            MovieEndpoint.popularMovies(1).retrieve ({ (response: PopularMoviesResponse) in
+                self?.popularMovies = response.results
+            }, dispatcher: completion)
         }
-        return genreNameArray.joined(separator: ", ")
     }
 }
