@@ -81,7 +81,7 @@ class MoviesViewController: UIViewController,  UITableViewDelegate, UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "GalleryTableViewCell") as? GalleryTableViewCell
-            cell?.populate(popularMovies: viewModel.popularMovies ?? [Movie]())
+            cell?.populate(popularMovies: viewModel.popularMovies ?? [Movie](), navigationController: self.navigationController ?? UINavigationController())
             return cell ?? UITableViewCell()
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieTableViewCell") as? MovieTableViewCell

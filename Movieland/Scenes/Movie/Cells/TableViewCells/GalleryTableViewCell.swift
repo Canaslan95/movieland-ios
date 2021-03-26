@@ -13,6 +13,7 @@ class GalleryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
     @IBOutlet weak var collectionView: UICollectionView!
     
     var popularMovies: [Movie]? = [Movie]()
+    var navigationController: UINavigationController = UINavigationController()
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -35,9 +36,17 @@ class GalleryTableViewCell: UITableViewCell, UICollectionViewDelegate, UICollect
         guard let popularMovies = popularMovies else { return UICollectionViewCell() }
         cell.populate(popularMovie: popularMovies[indexPath.row])
         return cell
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let viewModel = MovieDetailViewModel(movieId: self.popularMovies?[indexPath.row].id ?? 0)
+        let controller = MovieDetailViewController(viewModel: viewModel)
+        self.navigationController.pushViewController(controller, animated: true)
     }
     
-    func populate(popularMovies: [Movie]) {
+    
+    func populate(popularMovies: [Movie], navigationController: UINavigationController) {
+        self.navigationController = navigationController
         self.popularMovies = popularMovies
         DispatchQueue.main.async {
             self.collectionView.reloadData()
